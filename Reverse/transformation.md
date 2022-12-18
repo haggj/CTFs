@@ -2,8 +2,8 @@
 
 ## Analysis
 
-We are given a string containing chinese characters.
-We also received the python code which produced this string from the flag.
+We are given a string containing Chinese characters.
+We also received the python code which produced this string based on a given flag.
 
 ## Solution
 
@@ -13,7 +13,7 @@ The numeric value of the first character is shifted by 8 digits to the left (bin
 The resulting value is added to the numeric value of the second character.
 The resulting value is finally interpreted as character again.
 
-The following python script decrypts the flag based on the descript encryption:
+The following python script decrypts the flag based on the described encryption:
 
 ```python
 
