@@ -6,4 +6,4 @@
   - During destruction the server queries the database with the query stored in the ``SQL`` object
   - The resulted query is presented to the server, as long as it has a `username` column
 - The code in `index.php` crafts a ```SQL``` object which contains a query which delivers the flag by querying the password of the user
-- If the crafted object is base64-encoded and put into the cookie `leet_hax0r`, the server deleivers the flag
+- If the crafted object is base64-encoded and put into the cookie `leet_hax0r`, the server delivers the flag
