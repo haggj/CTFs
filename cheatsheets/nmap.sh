@@ -35,7 +35,7 @@ searchsploit --nmap scan/scantopdetail.xml --exclude="apache"
 # NMAP full TCP scan
 #
 info "Scanning the whole TCP port range"
-nmap -p 1-100,5789  -v -oA scan/scanall $IP | grep -e "Stats" -e "Timing" -e "Discovered"
+nmap -p-  -v -oA scan/scanall $IP | grep -e "Stats" -e "Timing" -e "Discovered"
 PORTS=$(grep -o "^[0-9]*" scan/scanall.nmap | tr "\n" "," | sed 's/.$//')
 printf "\nDetails in scan/scanall.nmap"
 
