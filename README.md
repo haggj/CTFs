@@ -3,6 +3,7 @@
 This repo contains writeups of different CTFs I solved.
 
 - `common`: contains common assets such as wordlists, enumeration scripts and cheatsheets for all CTFs
+- `dvwa`: contains writeups of [**D**amn**V**ulnerable**W**eb**A**pp](https://github.com/digininja/DVWA)
 - `hackthebox`: contains writeups of [HackTheBox](https://www.hackthebox.com/) maschines and challenges
 - `picoCTF`: contains writeups of [picoCTF](https://picoctf.org/) challenges
 - `websec`: contains writeups of [websec](https://websec.fr/) levels
