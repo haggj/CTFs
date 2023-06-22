@@ -1,6 +1,8 @@
 # XSS DOM
 
-User input is included in the DOM of the page. This allows an attacker to inject arbitrary JavaScript code.
+User input is included in the DOM of the page. 
+This allows an attacker to inject arbitrary JavaScript code.
+In this scenario, the frontend application (incorrectly) parses the URL and includes the value of the `default` parameter into the DOM.
 
 ## Low
 No input sanitization at all. Include any JS code directly into the `default` parameter:
