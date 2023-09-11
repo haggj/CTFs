@@ -36,6 +36,8 @@ gobuster vhost -u <url> --apend-domain -w <wordlist>
 [ffuf scans much faster using HOST header](http://ffuf.me/sub/vhost)
 
 ## SQLInjection
+
+### Payloads
 Basic injections to test for strings:
 ```
 bla' or 1=1; --
@@ -50,7 +52,9 @@ Basic injections to test for integers:
 1234 or 1=1; #
 ```
 
-Detect database type: [Details here](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/README.md#dbms-identification)
+Detect database type: [Techniques here](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/README.md#dbms-identification)
+
+### SQLMap
 
 Use sqlmap the following way if the string is closed via `"` ([details](https://github.com/sqlmapproject/sqlmap/wiki/Usage#custom-injection-payload))
 ```
